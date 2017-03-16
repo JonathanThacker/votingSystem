@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+<script>
+
+var txtFile = new XMLHttpRequest();
+txtFile.open("GET", "mydata.txt", true);
+txtFile.onreadystatechange = function() {
+  if (txtFile.readyState === 4) { 
+    if (txtFile.status === 200) { 
+      allText = txtFile.responseText;
+      lines = txtFile.responseText.split("\n"); 
+
+             function choiceXCount(){ 
+return allText.split("CHOICEX").length;}
+      document.write("CHOICEX" + " - " + choiceXCount(lines) + "<BR>");
+      
+    document.write("");
+      
+             function choiceYCount(){ 
+return allText.split("CHOICEY").length;}
+      document.write("CHOICEY" + " - " + choiceYCount(lines) + "<BR>");
+    }
+  }
+}
+txtFile.send(null);
+</script>
+
+</head>
+<body>
+
+
+</body></html>
+
+
