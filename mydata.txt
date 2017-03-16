@@ -1,0 +1,5 @@
+// Intentionally left blank
+// The votes will be writen to this file line by line
+
+//example output
+Bobby Jones-BobbyInYours@someplace.de-choice2x-Choice3y
